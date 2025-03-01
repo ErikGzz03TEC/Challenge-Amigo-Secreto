@@ -1,10 +1,14 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-listaAmigos = [];
+function condicionesInciales(){
+    listaAmigos = [];
+    document.getElementById('amigo').disabled = false;
+    document.getElementById('agregar').disabled = false;
+}
 
 function añadirLista(nombre) {
     if (listaAmigos.includes(nombre)) {
         alert('El amigo ya está en la lista.');
-        return
+        return;
     }
     let lista = document.getElementById('listaAmigos');
     listaAmigos.push(nombre);
@@ -30,7 +34,7 @@ document.getElementById('amigo').addEventListener('keypress', function(event) {
 
 function sortearAmigo() {
     if (listaAmigos.length === 0) {
-        alert('Debes tener al menos UN amigos para sortear.');
+        alert('Debes tener al menos UN amigo para sortear.');
         return;
     }
     let indiceAleatorio = Math.floor(Math.random() * listaAmigos.length);
@@ -38,4 +42,10 @@ function sortearAmigo() {
 
     let resultado = document.getElementById('resultado');
     resultado.innerHTML = `<li class="sorteado"> El amigo sorteado es: "${amigoSorteado}" ¡Felicidades! </li>`;
+
+    // Deshabilitar el botón de agregar amigo
+    document.getElementById('amigo').disabled = true;
+    document.getElementById('agregar').disabled = true;
 }
+
+condicionesInciales();
