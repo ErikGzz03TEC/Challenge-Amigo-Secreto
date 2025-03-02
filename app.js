@@ -66,7 +66,7 @@ function sortearAmigo() {
     let amigoSorteado = listaAmigos[indiceAleatorio];
 
     let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li class="sorteado"> El amigo sorteado es: "${amigoSorteado}" ¡Felicidades! </li>`;
+    resultado.innerHTML = `<li class="sorteado"> El amigo sorteado es: "${amigoSorteado}" </li>`;
 
     // Deshabilitar el botón de agregar amigo
     document.getElementById('amigo').disabled = true;
