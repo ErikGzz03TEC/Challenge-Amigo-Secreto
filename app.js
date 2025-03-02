@@ -1,9 +1,17 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 function condicionesInciales(){
     listaAmigos = [];
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    document.getElementById('resultado').innerHTML = '';
+    lista.innerHTML = '';
     document.getElementById('amigo').disabled = false;
     document.getElementById('agregar').disabled = false;
 }
+
+function reiniciarJuego() {
+    condicionesInciales();
+}   
 
 function añadirLista(nombre) {
     if (listaAmigos.includes(nombre)) {
