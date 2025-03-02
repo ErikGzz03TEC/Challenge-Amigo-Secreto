@@ -18,12 +18,29 @@ function añadirLista(nombre) {
         alert('El amigo ya está en la lista.');
         return;
     }
+
     let lista = document.getElementById('listaAmigos');
     listaAmigos.push(nombre);
+
     let nuevoAmigo = document.createElement('li');
-    nuevoAmigo.textContent = nombre;
+    nuevoAmigo.classList.add('amigo-item');
+
+    let nombreSpan = document.createElement('span');
+    nombreSpan.textContent = nombre;
+
+    let botonEliminar = document.createElement('button');
+    botonEliminar.innerHTML = 'X';
+    botonEliminar.classList.add('eliminar-btn');
+    botonEliminar.onclick = function () {
+        listaAmigos = listaAmigos.filter(amigo => amigo !== nombre);
+        lista.removeChild(nuevoAmigo);
+    };
+
+    nuevoAmigo.appendChild(nombreSpan);
+    nuevoAmigo.appendChild(botonEliminar);
     lista.appendChild(nuevoAmigo);
 }
+
 
 function agregarAmigo() {
     let input = document.getElementById('amigo');

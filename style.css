@@ -142,6 +142,52 @@ ul {
     text-align: center;
 }
 
+
+/* Contenedor de la lista */
+.name-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho de la lista */
+}
+
+/* Cada elemento de la lista */
+.amigo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Botón de eliminar */
+.eliminar-btn {
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.eliminar-btn:hover {
+    background: #d43f3f;
+}
+
+
 /* Botón de sortear título */
 .button-draw {
     display: flex;
